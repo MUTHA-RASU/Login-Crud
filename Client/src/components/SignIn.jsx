@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import AxiosService from '../common/AxiosService';
 import { UserContext } from '../context/UserContext';
+import { BsPersonVcardFill } from 'react-icons/bs';
 
 
 export const SignIn = () => {
@@ -41,14 +42,13 @@ export const SignIn = () => {
   }
 
   return (
-    <div className="container mx-auto w-2/5">
-      <form action="" className="w-full mt-6 h-1/2 bg-red-200 shadow-lg relative overflow-hidden py-6 px-8 rounded-md flex flex-col gap-6">
+    <div className="container mx-auto w-1/3">
+      <form action="" className="w-full mt-6 h-1/2 bg-[url('../../signup1.avif')] shadow-lg relative overflow-hidden py-6 px-2 rounded-md flex flex-col gap-6">
+      <BsPersonVcardFill size={80} className='flex items-center jutify-center w-full'/>      
         <h1 className='text-4xl text-center mb-2'>SignIn</h1>
-
-        <div className="flex items-center w-full h-12 gap-4">
-          <label htmlFor="email" className="text-xl font-medium w-1/3">Email</label>
-          <input type="text" name="email" placeholder='sdeisee@gmail.com'
-            className="flex-1 py-2 px-2  focus:text-white focus:outline-none rounded-md  focus:bg-black  h-8"
+        <div className="flex items-center justify-center w-full h-12 gap-4">
+          <input type="text" name="email" placeholder='Email'
+            className="w-3/5 py-2 px-2  focus:text-white focus:outline-none rounded-md  focus:bg-black  h-12"
             onChange={handleChange}
             value={formData.email} />
         </div>
@@ -58,10 +58,9 @@ export const SignIn = () => {
           className="flex-1 py-2 px-2  focus:text-white focus:outline-none rounded-md  focus:bg-black  h-8" 
           onChange={handleChange}/>
         </div> */}
-        <div className="flex items-center w-full h-12 gap-4">
-          <label htmlFor="password" className="text-xl font-medium w-1/3">Password</label>
-          <input type="password" name="password" placeholder='ewe32!2$'
-            className="flex-1 py-2 px-2  focus:text-white focus:outline-none rounded-md  focus:bg-black  h-8"
+        <div className="flex items-center justify-center w-full h-12 gap-4">
+          <input type="password" name="password" placeholder='Password'
+            className="w-3/5 py-2 px-2  focus:text-white focus:outline-none rounded-md  focus:bg-black  h-12"
             value={formData.password}
             onChange={handleChange} />
         </div>

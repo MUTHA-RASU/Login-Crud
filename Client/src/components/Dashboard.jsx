@@ -20,6 +20,7 @@ export const Dashboard = () => {
 
   const getAllUsers = async () => {
     try {
+      
       const response = await AxiosService.get('/');
       setUserData(response.data.allUserData);
       console.log(userData)
@@ -58,7 +59,6 @@ export const Dashboard = () => {
     <div className='relative w-auto h-96'>
       <div className={imgActive ? 'absolute z-10 inset-1/4 w-1/2 h-full border-2 object-cover':'hidden'}>
         {updatedUserData.map((user)=>{
-          
           return(<>
           <img src={`../../${user.image}`} alt={user.image} className='w-full h-full '/>
           </>)
